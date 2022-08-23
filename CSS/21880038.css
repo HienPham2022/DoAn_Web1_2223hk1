@@ -83,3 +83,35 @@ h1 {
 #banner .carousel-indicators li.active span{
     background-color: var(--web1-green);
 }
+/* product */
+.readmore{
+    color: var(--web1-blue);
+    margin-top: -4px !important;
+}
+/* about us */
+#aboutus {
+    background-color: var(--web1-pink);
+}
+
+#formSignUp{
+    border-style: dashed !important;
+    border-color: rgba(0, 0, 0, 0.5) !important;
+}
+#news .date{
+    background-color: var(--web1-green);
+}
+/* footer */
+footer{
+    background-image:url('../images/bg-footer.gif') ;
+}
+#menu-footer a{
+    color:  white;
+    font-weight: bold;
+    font-family: 'Changa One',cursive;
+    display: block;
+    padding: 0 2rem ;
+}
+
+#menu-footer a.active{
+    color: var(--web1-pink);
+}
