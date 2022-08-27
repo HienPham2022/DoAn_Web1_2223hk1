@@ -23,7 +23,7 @@
     <header class="container">
         <nav class="navbar navbar-expand-sm navbar-light ">
               <div class="container">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="index.html">
                     <img src="./images/logo.png" alt="logo">
                 </a>
                 <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#menu-header" aria-controls="menu-header"
@@ -33,22 +33,22 @@
                 <div class="collapse navbar-collapse" id="menu-header">
                     <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Home <span class="visually-hidden">(current)</span></a>
+                            <a class="nav-link" href="index.html">Home <span class="visually-hidden">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
+                            <a class="nav-link" href="about.html">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Gallery</a>
+                            <a class="nav-link" href="gallery.html">Gallery</a>
                         </li> 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Blogs</a>
+                            <a class="nav-link" href="blogs.html">Blogs</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contacts</a>
+                            <a class="nav-link" href="contacts.html">Contacts</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Login</a>
+                            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modalLogin">Login</a>
                         </li>
                        
                     </ul>
@@ -83,14 +83,14 @@
                     <div class="carousel-item active">
                         <h1>Web Development <br>
                         for everyone</h1>
-                        <a href="#" class="btn tect-bold text-uppercase text-white rounded-4 px-4">See more</a>
+                        <a href="gallery.html" class="btn tect-bold text-uppercase text-white rounded-4 px-4">See more</a>
                     </div>
                     <div class="carousel-item">
                         <h1>21880038 <br>
-                        Phạm Văn Hiền</h1>
+                        Pham Van Hien</h1>
                     </div>
                     <div class="carousel-item">
-                        <h1>Lập Trình Web1<br>
+                        <h1>Lap Trinh Web 1<br>
                             DTTX-HK1-2223</h1>
                     </div>
                 </div>
@@ -145,7 +145,7 @@
                         <img class="float-start me-3" src="./images/icon-about.png" alt="about us">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla tenetur accusamus rem voluptatum mollitia ut architecto ipsa doloremque. Repudiandae corporis obcaecati suscipit nisi, aliquid mollitia perspiciatis tempora molestiae quas. Ullam.</p>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis nesciunt molestias quam ad,.
-                         <a href="" class="btn btn-link readmore my-0 p-0">Read more</a></p>
+                         <a href="about.html" class="btn btn-link readmore my-0 p-0">Read more</a></p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-12">
@@ -216,26 +216,53 @@
     <footer class="text-center container-fluid text-white py-3">
         <ul class="nav justify-content-center py-3" id="menu-footer">
             <li class="nav-item">
-                <a class="nav-link active" href="#">Home</a>
+                <a class="nav-link active" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="about.html">About</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Gallery</a>
+                <a class="nav-link" href="gallery.html">Gallery</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Blogs</a>
+                <a class="nav-link" href="blogs.html">Blogs</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Contacts</a>
+                <a class="nav-link" href="contacts.html">Contacts</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Login</a>
+                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modalLogin">Login</a>
             </li>        
         </ul>
         <p class="text-white-50">Copyright &copy; 2022 Pham Van Hien-21880038</p>
-    </footer>
+    </footer>      
+    <!-- Modal -->
+    <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">                    
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="#" method="post" id="formLogin">
+                        <h3 class="text-center">
+                            Login Form
+                        </h3>
+                        <div class="mb-3">
+                            <input type="text" name="username" id="username" class="form-control" placeholder="Username">
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" name="password" id="password" class="form-control" placeholder="Password">
+                        </div>
+                        <button type="submit" class="form-control">Login</button>
+                    </form>
+                </div>
+                <div class="modal-footer">                   
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
 
