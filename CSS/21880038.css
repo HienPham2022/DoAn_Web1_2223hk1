@@ -106,6 +106,9 @@ h1 {
     border-style: dashed !important;
     border-color: rgba(0, 0, 0, 0.5) !important;
 }
+#about-us h4{
+    color: black;
+}
 /* News */
 #news .date{
     background-color: var(--web1-green);
@@ -131,4 +134,12 @@ footer{
 #formLogin button[type='submit']{
     background-color:var(--web1-blue) ;
     color: white;
+}
+/* Testimonials */
+#testimonials{
+    background-color: var(--web1-pink);
+}
+#testimonials .col{
+    background: url('../images/quot.png') left top no-repeat;
+    padding-left: 3rem;
 }
