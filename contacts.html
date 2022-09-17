@@ -128,7 +128,7 @@
                     </div>
                     <div class="row">
                         <div class="col">
-                            <div id="responseMessage" class="text-success "></div>
+                            <div id="responseMessage" class="text-primary "></div>
                         </div>
                         <div class="col">
                             <div class="text-end">
@@ -222,22 +222,21 @@
                     sendMail();
                 }else{
                     let responseMessage =document.getElementById('responseMessage');
-                    responseMessage.innerHTML = 'Error:Can not verify RECAPTCHA';
-                    responseMessage.classList.remove();
-                    responseMessage.classList.toggle('text-danger');
+                    responseMessage.innerHTML = 'Error:Can not verify RECAPTCHA';                   
+                    responseMessage.className='text-danger';
 
                 }
             });
         });
     }
-   async function sendMail(){
+    async function sendMail(){
         let responseMessage =document.getElementById('responseMessage');
         try{
             let token = await getAuthenticateToken('test','1c3cr3@m');
             let postData ={
                 name:document.getElementById('name').value,
                 email:document.getElementById('email').value,
-                subject:document.getElementById('comment').value,
+                subject:document.getElementById('subject').value,
                 message:document.getElementById('message').value,
                 copy : document.getElementById('copy').value
             }
@@ -252,17 +251,15 @@
             });
             let result = await response.json();
             if(response.status ==200){
-                responseMessage.innerHTML =result.message;        
-                responseMessage.classList.remove();
-                responseMessage.classList.toggle('text-success');
+                responseMessage.innerHTML =result.message;    
+                responseMessage.className='text-primary';
             }else{
                 throw new Error(result.message);
             }
 
         }catch(error){
             responseMessage.innerHTML =error;        
-            responseMessage.classList.remove();
-            responseMessage.classList.toggle('text-danger');
+            responseMessage.className='text-danger';
         }
     }
     </script> 
