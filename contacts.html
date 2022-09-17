@@ -234,10 +234,10 @@
         try{
             let token = await getAuthenticateToken('test','1c3cr3@m');
             let postData ={
-                name:document.getElementById('name').value,
-                email:document.getElementById('email').value,
-                subject:document.getElementById('subject').value,
-                message:document.getElementById('message').value,
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value,
                 copy : document.getElementById('copy').value
             }
             let response =await fetch(`${AUTHENTICATE_API}/send`,{

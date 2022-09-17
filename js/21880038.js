@@ -9,7 +9,7 @@ async function loadData(request,templateId,viewId){
     var view = document.getElementById(viewId);
     view.innerHTML = template(context);  
     
-}
+};
 
 async function getAuthenticateToken(username,password){
     let response = await fetch(`${AUTHENTICATE_API}/authenticate`,{
