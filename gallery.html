@@ -48,7 +48,8 @@
                             <a class="nav-link" href="contacts.html">Contacts</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modalLogin">Login</a>
+                            <a class="nav-link linkLogin" href="#" data-bs-toggle="modal" data-bs-target="#modalLogin">Login</a>
+                <a class="nav-link linkLogout" href="#" onclick="logout()" style="display: none;">Logout</a>
                         </li>
                        
                     </ul>
@@ -96,7 +97,8 @@
                 <a class="nav-link" href="contacts.html">Contacts</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modalLogin">Login</a>
+                <a class="nav-link linkLogin" href="#" data-bs-toggle="modal" data-bs-target="#modalLogin">Login</a>
+                <a class="nav-link linkLogout" href="#" onclick="logout()" style="display: none;">Logout</a>
             </li>        
         </ul>
         <p class="text-white-50">Copyright &copy; 2022 Pham Van Hien-21880038</p>
@@ -109,7 +111,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="#" method="post" id="formLogin">
+                    <form action="#" method="post" id="formLogin" onsubmit="login(event)">
                         <h3 class="text-center">
                             Login Form
                         </h3>
@@ -122,7 +124,10 @@
                         <button type="submit" class="form-control">Login</button>
                     </form>
                 </div>
-                <div class="modal-footer">                   
+                <div class="modal-footer justify-content-center"> 
+                    <div class="text-danger" id="errorMessage">
+
+                    </div>                  
                 </div>
             </div>
         </div>
@@ -159,6 +164,7 @@
     </script>
 
     <script>
+        checkLogin();
         loadData('gallery-categories','gallery-categories-template','gallery-categories');
         loadData('gallery','gallery-template','gallery');
         
