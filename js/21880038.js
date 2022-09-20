@@ -58,6 +58,10 @@ async function login(e){
             linkLogins[i].style.display = displayLogin;
             linkLogouts[i].style.display = displayLogout; 
         }
+        let leaveComment = document.getElementById('leave-comment');
+        if(leaveComment){
+            leaveComment.style.display = displayLogout;
+        }
     }
 
     async function checkLogin(){
