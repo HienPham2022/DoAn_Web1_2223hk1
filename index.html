@@ -216,8 +216,7 @@
                  onmouseout="setActiveImagepath(this,'{{imagepath}}',false)">
                 <h3>{{name}}</h3>
                 <p class="text-black-50">{{summary}}</p>
-                <a  class="readmore btn btn-link pt-0" href="#"
-                    onclick="loadData('products/{{id}}','details-template','content')"
+                <a  class="readmore btn btn-link pt-0" href="?request=products/{{id}}"                    
                 >Read More</a>           
             </div>
             {{/each}}
@@ -234,8 +233,7 @@
                             {{date}}
                         </h3>
                     </div>
-                    <a href="#" class="btn btn-link readmore ps-0"                       
-                        onclick="loadData('news/{{id}}','details-template','content')"
+                    <a href="?request=news/{{id}}" class="btn btn-link readmore ps-0"
                     >Read more</a>
                 </div>
                 <div>
@@ -256,9 +254,15 @@
         {{/each}}
     </script>
     <script>
+        let searchParams =new URLSearchParams(location.search);
+        let request = searchParams.get('request');
+        if(request){
+            loadData(request,'details-template','content');
+        }else{
         checkLogin();
         loadData('products','products-template','products');
         loadData('news','news-template','news');
+        }
         function setActiveImagepath(img,imagepath,isActive =true){
             if(isActive){
                 img.src = imagepath.replace('.','-active.');
